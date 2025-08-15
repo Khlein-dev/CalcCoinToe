@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(16, 4, 28);
+    height: 100vh;
+    align-items: center;
+}
+
+
+.container {
+    width: 400px;
+    height: 600px;
+    border-radius: 15px;
+    align-items: center;
+    gap: 200px;
+    justify-items: center;
+    margin: 150px;
+  
+
+
+}
+
+button {
+    position: relative;
+    background-color: rgb(57, 30, 83);
+    border-radius: 15px;
+    height: 100px;
+    width: 300px;
+    margin: 10px;
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 1000ms;
+    
+        
+
+}
+
+button:hover{
+    transform: translateY(-10px);
+    background-color: aliceblue;
+
+}
+
+.calculate {
+    position: absolute;
+    background: linear-gradient(to bottom, #ffa500, #ff6600);
+    border-radius: 20px;
+    margin-top: -770px;
+    margin-left: 300px;
+    width: 600px;
+    height: 400px;
+    display: none;
+}
+
+showCal.calculate{
+    display: block;
+}
+

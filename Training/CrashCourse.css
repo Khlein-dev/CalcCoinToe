@@ -1,0 +1,205 @@
+body{
+    height: 150vh;
+}
+
+.title {
+    font-size: 52px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.para {
+    font-size: 20px;
+}
+
+/* Responisveness */
+
+@media(max-width: 640px) {
+    .title {
+        font-size: 50px;
+        color: aqua
+    }
+
+    .para {
+        font-size: 30px;
+    }
+
+}
+
+@media(max-width: 480px) {
+    .title {
+        font-size: 42px;
+        color: red;
+    }
+
+    .para {
+        font-size: 40px;
+    }
+
+}
+
+
+button {
+    transition: 400ms;
+
+}
+
+button:hover {
+
+    opacity: 70%;
+    margin-top: -10px;
+
+
+}
+
+/* Pseudo Something */
+
+p::before {
+    content: "My name is ";
+
+}
+
+p::after {
+
+    content: " Pascua";
+
+}
+
+/* Animation */
+
+.po {
+    transform: translateY(20px);
+    animation: pointdown 3000ms infinite;
+}
+
+@keyframes pointdown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+/* try */
+@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=Edu+SA+Hand:wght@400..700&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');.box {
+   
+    width: 400px;
+    
+    background: linear-gradient(to bottom, #4b094b, #1c0313, #1a020f);
+    border-radius: 20px;
+    transition: 1000ms;
+    padding: 10px;
+    color: white;
+    font-family: 'Edu SA Hand', cursive;
+    animation: float 3000ms infinite;
+
+}
+
+.click {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    transition: 1000ms;
+    background-color: #4b094b;
+    text-align: center;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.click:hover {
+    background-color: #9b2d9b;
+    color: #150315;
+    margin-top: -5px;
+
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.image {
+    width: 30%;
+    border-radius: 20px;
+    transition: 500ms;
+    margin-top: -100px;
+    left: 65%;
+    position: relative;
+    
+}
+
+
+.nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 1260px;
+    height: 70px;
+    background-color: #2f0a2f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    
+   
+}
+
+.sidebar {
+    position: fixed;
+    width: 300px;
+    height: 50%;
+    background-color: #1c0313;
+    top: 0;
+    right: 0;
+    display: none;
+    animation: smooth 600ms 1;
+}
+
+.open .sidebar {
+    display: block;
+    
+}
+
+@keyframes smooth {
+    0% {
+        transform: translateX(400px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+ 
+}
+
+.dark {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 1000ms;
+}
+
