@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
 
-body{
+body {
     background-color: #0b0413;
     align-items: center;
 }
@@ -14,9 +14,9 @@ body{
     gap: 200px;
     justify-items: center;
     margin-top: 80px;
-  
 
-    
+
+
 }
 
 button {
@@ -32,12 +32,12 @@ button {
     border: none;
     color: #0b0413;
     letter-spacing: 3px;
-    
-        
+
+
 
 }
 
-button:hover{
+button:hover {
     transform: translateY(-10px);
     background-color: aliceblue;
 
@@ -47,22 +47,47 @@ button:hover{
     position: absolute;
     background: linear-gradient;
     border-radius: 20px;
-    margin-top: -770px;
-    margin-left: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 600px;
-    height: 400px;
+    height: 600px;
+    background: linear-gradient(to top, #0b0413, #1a0c1f, #2a162b);
+    border: #681b43 4px solid;
+    padding: 2px;
+    animation: smooth 600ms 1;
     display: none;
+
 }
 
-showCal.calculate{
+@keyframes smooth {
+    0% {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+
+    }
+
+    100% {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+}
+
+.showCal .calculate {
     display: block;
 }
 
 #f1 {
     background: linear-gradient(to bottom, #a93470, #741f4b);
     box-shadow: inset #681b43 0px 0px 22px;
-    box-shadow: #a93470 0px 0px 20px;   
-    
+    box-shadow: #a93470 0px 0px 20px;
+
 }
 
 #f2 {

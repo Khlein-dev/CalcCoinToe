@@ -1,3 +1,4 @@
-function f1 () {
+function  cal() {
     document.querySelector(`body`).classList.add(`showCal`)
 }
+
