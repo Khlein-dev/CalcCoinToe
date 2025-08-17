@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+
 body{
-    background-color: #12081c;
-    height: 100vh;
+    background-color: #0b0413;
     align-items: center;
 }
 
@@ -12,7 +13,7 @@ body{
     align-items: center;
     gap: 200px;
     justify-items: center;
-    margin: 150px;
+    margin-top: 80px;
   
 
     
@@ -20,15 +21,17 @@ body{
 
 button {
     position: relative;
-    border-radius: 15px;
+    border-radius: 8px;
     height: 100px;
     width: 300px;
     margin: 15px;
     font-size: 40px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    transition: 1000ms;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    transition: 300ms;
     border: none;
-    color: rgb(0, 1, 7);
+    color: #0b0413;
+    letter-spacing: 3px;
     
         
 
@@ -70,4 +73,9 @@ showCal.calculate{
 #f3 {
     background: linear-gradient(to bottom, #0dbf7e, #088658);
     box-shadow: #088658 0px 0px 22px;
+}
+
+img {
+    width: 70px;
+    height: 70px;
 }
