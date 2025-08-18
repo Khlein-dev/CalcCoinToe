@@ -60,6 +60,7 @@ button:hover {
     background: linear-gradient(to top, #0b0413, #1a0c1f, #2a162b);
     padding: 3px;
     padding-left: 10px;
+    
     animation: smooth 600ms 1;
     display: none;
 
