@@ -60,25 +60,24 @@ button:hover {
     background: linear-gradient(to top, #0b0413, #1a0c1f, #2a162b);
     padding: 3px;
     padding-left: 10px;
-    
+
     animation: smooth 600ms 1;
     display: none;
 
 }
 
-.calculate {
-    border: #681b43 4px solid;
-}
-
 .calculate h1,
 .convert h1,
 .tictac h1 {
+    position: absolute;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 600;
     font-size: 70px;
     letter-spacing: 10px;
-    margin-top: -5px;
+    margin-top: -10px;
 }
+
+
 
 .calculate h1 {
     background: linear-gradient(to right, #a93470, #681b43, #260717);
@@ -96,6 +95,10 @@ button:hover {
     background: linear-gradient(to right, #0dbf7e, #088658, #033d3a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.calculate {
+    border: #681b43 4px solid;
 }
 
 .convert {
@@ -138,6 +141,34 @@ button:hover {
     display: block;
 }
 
+.exit {
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 86%;
+    border: none;
+    color: #0b0413;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+.exitCalc{
+    background: linear-gradient(to bottom, #a93470, #681b43);
+    box-shadow: #a93470 0px 0px 20px;
+}
+
+.exitCon{
+    background: linear-gradient(to bottom, #ffa500, #ff6600);
+    box-shadow: #ff6600 0px 0px 22px;
+    
+}
+
+.exitTic{
+    background: linear-gradient(to bottom, #0dbf7e, #088658);
+    box-shadow: #088658 0px 0px 22px;
+    
+}
 
 
 #f1 {
