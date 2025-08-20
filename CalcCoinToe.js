@@ -36,3 +36,37 @@ exitConBtn.addEventListener('click', () => {
 exitTicBtn.addEventListener('click', () => {
     tictac.style.display = 'none';
 }); 
+
+
+compute = () => {
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    let operator = document.getElementById("operator").value;
+    let result; 
+    switch (operator) {
+        case "+":
+            result = parseFloat(num1) + parseFloat(num2);   
+            break;
+        case "-":
+            result = parseFloat(num1) - parseFloat(num2);
+            break;  
+        case "*":
+            result = parseFloat(num1) * parseFloat(num2);
+            break;
+        case "/":
+            if (num2 == 0) {
+                result = "Cannot divide by zero";
+            }
+
+            else {
+                result = parseFloat(num1) / parseFloat(num2);
+            }   
+            break;
+        default:
+            result = "Invalid operator";
+    }
+    document.getElementById("result").innerHTML = "Result: " + result;
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    document.getElementById("operator").value = "";
+}
