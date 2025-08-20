@@ -46,7 +46,7 @@
         <button class="exit exitCalc">X</button>
 
         <div class="CalcContainer">
-            <input type="text" id="display" disabled style="height: 200px;">
+            <input type="text" id="display" disabled>
             <div class="buttons">
                 <button onclick="clearDisplay()">C</button>
                 <button onclick="appendToDisplay('7')">7</button>
@@ -74,6 +74,17 @@
     <div class="convert">
         <h1>CONVERT</h1>
         <button class="exit exitCon">X</button>
+        <div class="ConContainer">
+            <input type="text" id="coinInput" placeholder="Enter amount">
+            <select id="coinType">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="gbp">GBP</option>
+                <option value="jpy">JPY</option>
+            </select>
+            <button onclick="convertCoin()">Convert</button>
+            <div id="conversionResult"></div>
+        </div>
 
     </div>
 
