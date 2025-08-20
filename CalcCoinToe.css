@@ -275,3 +275,65 @@ img {
     background-color: #5b1eb7;
     color: #fff;
 }
+
+/* TIC TAC TOE */
+.TicContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -43%);
+    width: 580px;
+    height: 500px;
+    background-color: #0b0413;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.TicContainer .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.TicContainer .grid button {
+    width: 150px;
+    height: 150px;
+    font-size: 60px;
+    background-color: #5b1eb7;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+.TicContainer .grid button:hover {
+    background-color: #681b43;
+    color: #fff;
+}
+.exit {
+    position: absolute;
+    top: 10px;
+    left: 86%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: #0b0413;
+    font-size: 30px;
+    cursor: pointer;
+}
+.exit:hover {
+    background-color: #681b43;
+    color: #fff;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    background-color: #5b1eb7;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
