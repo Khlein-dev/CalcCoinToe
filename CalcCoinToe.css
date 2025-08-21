@@ -205,27 +205,25 @@ img {
     background-color: #0b0413;
     border-radius: 20px;
     display: flex;
+    align-self: start;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 10px;
 }
-.screen{
-    width: 520px;
-    height: 100px;
-    background-color: #5b1eb7;
-    color: #fff;
-    font-size: 40px;
+
+.screen {
+  
+    font-size: 50px;
     text-align: right;
-    padding: 10px;
     border-radius: 10px;
     border: none;
     margin-bottom: 20px;
+    color: #010101;
 }
 
+
 .CalcContainer button {
-    width: 95px;
-    height: 95px;
+    width: 90px;
+    height: 80px;
     font-size: 30px;
     margin: 10px;
 }
@@ -236,15 +234,17 @@ img {
 }
 
 .CalcContainer input[type="text"] {
-    width: 520px;
-    height: 50px;
+    width: 575px;
+    height: 90px;
     font-size: 30px;
-    padding: 10px;
     border-radius: 10px;
     border: none;
     margin-bottom: 20px;
-    background-color: #5b1eb7;
+    background: linear-gradient(to bottom, #2d0e54, #1a0633, #120423);
     color: #fff;
+    font-size: 50px;
+    text-align: right;
+    
 }
 
 /* CONVERTER */
