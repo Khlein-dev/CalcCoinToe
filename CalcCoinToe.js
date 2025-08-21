@@ -35,55 +35,35 @@ exitConBtn.addEventListener('click', () => {
 
 exitTicBtn.addEventListener('click', () => {
     tictac.style.display = 'none';
-}); 
+});
+
+// CALCULATOR
 
 function appendToDisplay(value) {
-    const display = document.getElementById('display');
-    if (display.value === '0' && value !== '.') {
-        display.value = value;
-    }   
-    else {
-        display.value += value;
-    }               
+    const display = document.querySelector('.CalcContainer input[type="text"]');
+    display.value += value;
 }
-
 function clearDisplay() {
-    document.getElementById('display').value = '0';
+    const display = document.querySelector('.CalcContainer input[type="text"]');
+    display.value = '';
 }
 function calculateResult() {
-    const display = document.getElementById('display');         
+    const display = document.querySelector('.CalcContainer input[type="text"]');
     try {
         display.value = eval(display.value);
     }
     catch (error) {
         display.value = 'Error';
-    }   
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const display = document.getElementById('display');
-    display.value = '0'; // Initialize display
-}); 
-
-// This function is used to handle the display of the calculator
-function handleButtonClick(event) {
-    const button = event.target;
-    const display = document.getElementById('display');     
-    if (button.classList.contains('numbers')) {
-        appendToDisplay(button.textContent);    
-    } else if (button.classList.contains('operators')) {
-        appendToDisplay(button.textContent);
-    }       
-    else if (button.classList.contains('equals')) {
-        calculateResult();
-    }       
-    else if (button.classList.contains('clear')) {          
-        clearDisplay(); 
-    }   
-    else if (button.classList.contains('exit')) {       
-        const calculator = document.querySelector('.calculate');    
-        calculator.style.display = 'none'; // Hide the calculator
     }
 }
+
+
+function deleteLast() {
+    let display = document.getElementById('display'); // Change 'display' to your actual input/display element's ID
+    display.value = display.value.slice(0, -1);
+}
+
+
+// CONVERTER
 
 

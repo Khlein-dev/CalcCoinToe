@@ -150,24 +150,24 @@ button:hover {
     color: #0b0413;
     font-size: 30px;
     cursor: pointer;
-    
+
 }
 
-.exitCalc{
+.exitCalc {
     background: linear-gradient(to bottom, #a93470, #681b43);
     box-shadow: #a93470 0px 0px 20px;
 }
 
-.exitCon{
+.exitCon {
     background: linear-gradient(to bottom, #ffa500, #ff6600);
     box-shadow: #ff6600 0px 0px 22px;
-    
+
 }
 
-.exitTic{
+.exitTic {
     background: linear-gradient(to bottom, #0dbf7e, #088658);
     box-shadow: #088658 0px 0px 22px;
-    
+
 }
 
 
@@ -211,7 +211,7 @@ img {
 }
 
 .screen {
-  
+
     font-size: 50px;
     text-align: right;
     border-radius: 10px;
@@ -244,7 +244,7 @@ img {
     color: #fff;
     font-size: 50px;
     text-align: right;
-    
+
 }
 
 .numbers {
@@ -258,6 +258,7 @@ img {
 .equals {
     background: linear-gradient(to bottom, #0dbf7e, #088658, #033d3a);
 }
+
 /* CONVERTER */
 
 .ConContainer {
@@ -269,22 +270,37 @@ img {
     height: 500px;
     background-color: #0b0413;
     border-radius: 20px;
-    display: flex;
+
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-.ConContainer select,
-.ConContainer input[type="number"] {
-    width: 520px;
-    height: 50px;
-    font-size: 30px;
     padding: 10px;
+}
+
+#coinInput {
+    width: 575px;
+    height: 90px;
+    font-size: 30px;
     border-radius: 10px;
     border: none;
     margin-bottom: 20px;
-    background-color: #5b1eb7;
+    background: linear-gradient(to bottom, #2d0e54, #1a0633, #120423);
     color: #fff;
+    font-size: 50px;
+    text-align: right;
+}
+
+.ConContainer button {
+    width: 250px;
+    height: 80px;
+    font-size: 30px;
+    margin: 10px;
+    background: linear-gradient(to bottom, #753eb9, #45197c, #320f5d);
+    color: #fff;
+}
+
+#convertt {
+    width: 350px;
+    background: linear-gradient(to bottom, #0dbf7e, #088658, #033d3a);
 }
 
 /* TIC TAC TOE */
@@ -302,11 +318,13 @@ img {
     align-items: center;
     justify-content: center;
 }
+
 .TicContainer .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+
 .TicContainer .grid button {
     width: 150px;
     height: 150px;
@@ -316,10 +334,12 @@ img {
     border: none;
     border-radius: 10px;
 }
+
 .TicContainer .grid button:hover {
     background-color: #681b43;
     color: #fff;
 }
+
 .exit {
     position: absolute;
     top: 10px;
@@ -331,6 +351,7 @@ img {
     font-size: 30px;
     cursor: pointer;
 }
+
 .exit:hover {
     background-color: #681b43;
     color: #fff;

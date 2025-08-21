@@ -53,8 +53,8 @@
                     <button onclick="appendToDisplay('7')" class="numbers">7</button>
                     <button onclick="appendToDisplay('8')" class="numbers">8</button>
                     <button onclick="appendToDisplay('9')" class="numbers">9</button>
+                    <button onclick="deleteLast()" class="operators">DE</button>
                     <button onclick="clearDisplay()" class="operators">CE</button>
-                    <button onclick="appendToDisplay('/')" class="operators">/</button>
                     <button onclick="appendToDisplay('4')" class="numbers">4</button>
                     <button onclick="appendToDisplay('5')" class="numbers">5</button>
                     <button onclick="appendToDisplay('6')" class="numbers">6</button>
@@ -64,7 +64,7 @@
                     <button onclick="appendToDisplay('2')" class="numbers">2</button>
                     <button onclick="appendToDisplay('3')" class="numbers">3</button>
                     <button onclick="appendToDisplay('+')" class="operators">+</button>
-                    <button onclick="appendToDisplay('%')" class="operators">%</button>
+                    <button onclick="appendToDisplay('/')" class="operators">/</button>
                     <button onclick="appendToDisplay('0')" class="numbers">0</button>
                     <button onclick="appendToDisplay('00')" class="numbers">00</button>
                     <button onclick="appendToDisplay('.')" class="numbers">.</button>
@@ -81,17 +81,19 @@
     <div class="convert">
         <h1>CONVERT</h1>
         <button class="exit exitCon">X</button>
-        <div class="ConContainer">
-            <input type="text" id="coinInput" placeholder="Enter amount">
-            <select id="coinType">
-                <option value="usd">USD</option>
-                <option value="eur">EUR</option>
-                <option value="gbp">GBP</option>
-                <option value="jpy">JPY</option>
-            </select>
-            <button onclick="convertCoin()">Convert</button>
-            <div id="conversionResult"></div>
-        </div>
+        <center>
+            <div class="ConContainer">
+                <input type="text" id="coinInput" placeholder="Enter amount">
+                <button onclick="dollars()"> USD </button>
+                <button onclick="pesos()"> PHP </button>
+                <button onclick="yen()"> JPY </button>
+                <button onclick="euro()"> EUR </button>
+                <button onclick="pounds()"> GBP </button>
+                <button onclick="won()"> KRW </button>
+                <button onclick="convertCoin()" id="convertt">Convert</button>
+                <div id="conversionResult"></div>
+            </div>
+        </center>
 
     </div>
 
