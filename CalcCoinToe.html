@@ -84,12 +84,12 @@
         <center>
             <div class="ConContainer">
                 <input type="text" id="coinInput" placeholder="Enter amount">
-                <button onclick="dollars()"> USD </button>
-                <button onclick="pesos()"> PHP </button>
-                <button onclick="yen()"> JPY </button>
-                <button onclick="euro()"> EUR </button>
-                <button onclick="pounds()"> GBP </button>
-                <button onclick="won()"> KRW </button>
+                <button onclick="dollars()" id="usd"><img src="currencyFlags/flag.png"> USD </button>
+                <button onclick="pesos()" id="pesos"><img src="currencyFlags/philippines.png"> PHP </button>
+                <button onclick="yen()" id="yen"><img src="currencyFlags/japan.png">JPY </button>
+                <button onclick="euro()" id="euro"><img src="currencyFlags/italy.png">EUR </button>
+                <button onclick="pounds()" id="pound"><img src="currencyFlags/united-kingdom.png"> GBP </button>
+                <button onclick="won()" id="won"><img src="currencyFlags/south-korea.png"> KRW </button>
                 <button onclick="convertCoin()" id="convertt">Convert</button>
                 <div id="conversionResult"></div>
             </div>
