@@ -66,9 +66,8 @@ function deleteLast() {
 
 // CONVERTER
 
-function dollars() {
-    const display = document.getElementById('usd');
-    
-}
+
+
+
 
 
