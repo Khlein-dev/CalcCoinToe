@@ -247,6 +247,17 @@ img {
     
 }
 
+.numbers {
+    background: linear-gradient(to bottom, #753eb9, #45197c, #320f5d);
+}
+
+.operators {
+    background: linear-gradient(to bottom, #ffa500, #ff6600, #b33c00);
+}
+
+.equals {
+    background: linear-gradient(to bottom, #0dbf7e, #088658, #033d3a);
+}
 /* CONVERTER */
 
 .ConContainer {
