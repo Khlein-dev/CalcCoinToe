@@ -275,7 +275,7 @@ img {
     padding: 10px;
 }
 
-#coinInput {
+#amount {
     width: 575px;
     height: 90px;
     font-size: 30px;
@@ -288,26 +288,63 @@ img {
     text-align: right;
 }
 
-.ConContainer button {
-    width: 250px;
-    height: 80px;
-    font-size: 30px;
-    margin: 10px;
-    background: linear-gradient(to bottom, #753eb9, #45197c, #320f5d);
+#fromCurrency,
+#toCurrency {
+    width: 200px;
+    height: 70px;
+    background: linear-gradient(to bottom, #2d0e54, #1a0633, #120423);
+    border-radius: 30px;
+    font-size: 20px;
     color: #fff;
+    border: 2px solid #ff6600;
 }
 
-#convertt {
-    width: 350px;
-    background: linear-gradient(to bottom, #0dbf7e, #088658, #033d3a);
+
+select {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: #333;
 }
 
-.ConContainer img {
-    width: 50px;
+span {
+    font-size: 50px;
+    background: linear-gradient(to right, #ffa500, #ff6600, #b33c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+option {
+    background-color: #1a0633;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+}
+
+option:hover {
+    background-color: #2d0e54;
+    color: white;
+}
+
+option:checked {
+    background-color: #ff6600;
+    color: white;
+}
+
+#resultCurrency {
+    background: linear-gradient(to bottom, #ffa500, #ff6600, #b33c00);
     height: 50px;
-    position: absolute;
-    transform: translate(-110%, -19%);
+    width: 130px;
+    font-size: 20px;
+}
 
+#result {
+    font-size: 50px;
+    background: linear-gradient(to right, #ffa500, #ff6600, #b33c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* TIC TAC TOE */
