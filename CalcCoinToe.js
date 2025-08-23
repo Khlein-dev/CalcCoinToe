@@ -66,6 +66,55 @@ function deleteLast() {
 
 // CONVERTER
 
+const amountInput = document.getElementById("coinInput");
+const resultDiv = document.getElementById("conversionResult");
+
+// Buttons
+const usdBtn = document.getElementById("usd");
+const pesosBtn = document.getElementById("pesos");
+const yenBtn = document.getElementById("yen");
+const euroBtn = document.getElementById("euro");
+const poundBtn = document.getElementById("pound");
+const wonBtn = document.getElementById("won");
+const convertBtn = document.getElementById("convertt");
+
+let selectedCurrency = null;
+
+// Event listeners for currency buttons
+usdBtn.addEventListener("click", () => selectedCurrency = "USD");
+pesosBtn.addEventListener("click", () => selectedCurrency = "PHP");
+yenBtn.addEventListener("click", () => selectedCurrency = "JPY");
+euroBtn.addEventListener("click", () => selectedCurrency = "EUR");
+poundBtn.addEventListener("click", () => selectedCurrency = "GBP");
+wonBtn.addEventListener("click", () => selectedCurrency = "KRW");
+
+// Conversion logic
+convertBtn.addEventListener("click", () => {
+    const amount = parseFloat(amountInput.value);
+    
+    if (isNaN(amount) || amount <= 0) {
+        resultDiv.textContent = "Please enter a valid amount.";
+        return;
+    }
+    
+    if (!selectedCurrency) {
+        resultDiv.textContent = "Please select a currency.";
+        return;
+    }
+    
+    let rate = 1;
+    switch (selectedCurrency) {
+        case "USD": rate = 1; break;
+        case "PHP": rate = 56; break;
+        case "JPY": rate = 150; break;
+        case "EUR": rate = 0.9; break;
+        case "GBP": rate = 0.8; break;
+        case "KRW": rate = 1350; break;
+    }
+    
+    const converted = amount * rate;
+    resultDiv.textContent = `${amount} in base currency = ${converted.toFixed(2)} ${selectedCurrency}`;
+});
 
 
 

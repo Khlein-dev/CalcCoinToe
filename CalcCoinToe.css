@@ -324,24 +324,21 @@ img {
     padding: 10px;
 }
 
-.TicContainer .grid {
-    display: inline;
-    
-   
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.TicContainer .grid button {
-    width: 100px;
-    height: 100px;
-    font-size: 60px;
-    background: linear-gradient(to bottom, #0dbf7e, #088658, #033d3a);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-}
+
 
 .TicContainer .grid button:hover {
-    background-color: #681b43;
+    background-color: #150317;
     color: #fff;
 }
 
@@ -366,10 +363,20 @@ img {
 .cell {
     width: 100px;
     height: 100px;
-    display: flex;
     font-size: 60px;
-    background-color: #5b1eb7;
-    color: #fff;
+    background-color: #170433;
     border-radius: 10px;
     cursor: pointer;
+    color: #033d3a;
+}
+
+#resetButton {
+    background: linear-gradient(to bottom, #0dbf7e, #088658, #033d3a);
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+}
+
+#statusMessage {
+    color: #033d3a;
 }
