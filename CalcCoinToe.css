@@ -252,11 +252,11 @@ img {
 }
 
 .operators {
-    background: linear-gradient(to bottom, #ffa500, #ff6600, #b33c00);
+    background: linear-gradient(to bottom, #a93470, #681b43, #260717);
 }
 
 .equals {
-    background: linear-gradient(to bottom, #0dbf7e, #088658, #033d3a);
+    background: linear-gradient(to bottom, #e17aaf, #b45988, #5e2b46);
 }
 
 /* CONVERTER */
