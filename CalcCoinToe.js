@@ -37,6 +37,8 @@ exitTicBtn.addEventListener('click', () => {
     tictac.style.display = 'none';
 });
 
+
+
 // CALCULATOR
 
 function appendToDisplay(value) {

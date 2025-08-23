@@ -150,7 +150,12 @@ button:hover {
     color: #0b0413;
     font-size: 30px;
     cursor: pointer;
+    transform: translateY(-10px);
 
+}
+
+.exit:hover {
+    transform: translateY(-20px);
 }
 
 .exitCalc {
@@ -192,6 +197,8 @@ img {
     width: 70px;
     height: 70px;
 }
+
+
 
 /* CALCULATOR */
 
