@@ -55,7 +55,7 @@
 </head>
 
 <body
-    style="background-color: black; color: antiquewhite; margin: 50px; justify-content: center; transition: 300ms; gap: 15px;">
+    style="background-color: black; color: antiquewhite; margin: 50px; justify-content: center; transition: 300ms; gap: 15px; justify-content: center; justify-items: center; gap: 10px;">
     <button id="togglebtn" onclick="lightmode()"
         style="width: 200px; height: 50px; border-radius: 15px; background-color: aquamarine;">CHANGE TO LIGHT
         MODE</button>
@@ -78,6 +78,8 @@
     <button onclick="clearNum()"> CLEAR</button>
 
     <br>
+
+    <!--PAYROLL-->
 
     <div class="payroll">
 
@@ -150,6 +152,97 @@
         }
 
         .salary {
+            color: antiquewhite;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        placeholder {
+            color: black;
+        }
+    </style>
+
+    <br><br>
+
+    <!--STUDENT GRADE CALCULATOR-->
+    <div class="grade">
+        <center>
+            <h1>GRADE CALCULATOR</h1>
+            <input type="number" id="english" placeholder="English">
+            <input type="number" id="math" placeholder="Mathematics">
+            <input type="number" id="science" placeholder="Science">
+            <input type="number" id="history" placeholder="History"><br>
+            <button onclick="gradeCalcu()">GRADE AVERAGE</button>
+            <button onclick="clearGrade()">CLEAR</button>
+            <div class="perf">
+
+            </div>
+        </center>
+    </div>
+
+    <script>
+        function gradeCalcu() {
+            const english = parseFloat(document.getElementById('english').value);
+            const math = parseFloat(document.getElementById('math').value);
+            const science = parseFloat(document.getElementById('science').value);
+            const history = parseFloat(document.getElementById('history').value);
+            const gradeResult = document.getElementsByClassName('perf')[0];
+
+            const step1 = english + math + science + history;
+            const step2 = step1 / 4;
+
+            if (step2 <= 74) {
+                gradeResult.textContent = `You Failed! your Grade is ${step2}. Keep learning!`;
+            } else if (step2 >= 74) {
+                gradeResult.textContent = `You Passed! your Grade is ${step2}. Good job!`;
+            }
+        }
+
+        function clearGrade(){
+            document.getElementById('english').value = "";
+            document.getElementById('math').value = "";
+            document.getElementById('science').value = "";
+            document.getElementById('history').value = "";
+            document.getElementsByClassName('perf')[0].textContent= "";
+        }
+
+    </script>
+
+    <style>
+        .grade {
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #073a1e, #218982);
+            color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            gap: 10px;
+        }
+
+        .grade input {
+            width: 200px;
+            height: 30px;
+            border-radius: 8px;
+            background-color: #69d6a5;
+            margin-bottom: 10px;
+        }
+
+        .payroll button {
+            width: 200px;
+            height: 30px;
+            border-radius: 8px;
+            background-color: #d0770b;
+            transition: 400ms ease-in-out;
+        }
+
+        .payroll button:hover {
+            transform: translateY(-10px);
+        }
+
+        .perf {
             color: antiquewhite;
             font-size: 20px;
             font-weight: 500;
