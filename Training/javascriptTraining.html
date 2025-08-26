@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Training</title>
+    <script>
+        function lightmode() {
+            const body = document.body;
+            
+            if (body.style.backgroundColor === "black") {
+                // Switch to Light Mode
+                body.style.backgroundColor = "white";
+                body.style.color = "black";
+                button.textContent = "CHANGE TO DARK MODE";
+                
+            } else {
+                // Switch to Dark Mode
+                body.style.backgroundColor = "black";
+                body.style.color = "antiquewhite";
+                button.textContent = "CHANGE TO LIGHT MODE";
+                
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: black; color: antiquewhite; margin: 2px; justify-content: center; transition: 300ms;">
+
+    <button id="togglebtn" onclick="lightmode()">CHANGE TO LIGHT MODE</button>
+
+</body>
+
+</html>
