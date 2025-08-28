@@ -198,12 +198,12 @@
             }
         }
 
-        function clearGrade(){
+        function clearGrade() {
             document.getElementById('english').value = "";
             document.getElementById('math').value = "";
             document.getElementById('science').value = "";
             document.getElementById('history').value = "";
-            document.getElementsByClassName('perf')[0].textContent= "";
+            document.getElementsByClassName('perf')[0].textContent = "";
         }
 
     </script>
@@ -250,6 +250,74 @@
 
         placeholder {
             color: black;
+        }
+    </style>
+
+    <br><br>
+
+    <!-- CHANGE COLOR -->
+    <div class="color">
+        <center>
+            <h1 id="Font">RED</h1>
+            <button id="red" onclick="changeColor()">RED</button>
+            <button id="blue" onclick="changeColor()">BLUE</button>
+            <button id="yellow" onclick="changeColor()">YELLOW</button>
+        </center>
+    </div>
+
+    <script>
+
+        const palette = document.querySelector('.color');
+        const font = document.getElementById('Font');
+        document.getElementById('red').addEventListener('click', () => changeColor('red'));
+        document.getElementById('blue').addEventListener('click', () => changeColor('blue'));
+        document.getElementById('yellow').addEventListener('click', () => changeColor('yellow'));
+
+        function changeColor(color) {
+            palette.style.backgroundColor = color;
+            font.innerText = color.toUpperCase();
+        }
+
+
+
+    </script>
+
+    <style>
+        .color {
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #460808, #951111);
+            color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            gap: 10px;
+        }
+
+        .color button {
+            width: 200px;
+            height: 30px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: 400ms ease-in-out;
+        }
+
+        .color button:hover {
+            transform: translateY(-10px);
+        }
+
+        #red {
+            background: linear-gradient(45deg, #460808, #951111);
+        }
+
+        #blue {
+            background: linear-gradient(45deg, #031229, #112095);
+        }
+
+        #yellow {
+            background: linear-gradient(45deg, #fbda02, #e39904);
         }
     </style>
 
