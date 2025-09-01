@@ -494,6 +494,89 @@
         }
     </style>
 
+    <br><br>
+
+    <!-- EVENT LISTENERSS -->
+    <div style="display: flex; flex-direction: row; gap: 15px;">
+        <!-- Mouse Over -->
+        <div class="arrow">
+            <img src="pics/up-arrow.png" alt="">
+        </div>
+
+        <!-- Double Click -->
+         
+        <div class="double">
+            <center>
+                <h4>Change <br>Font</h4>
+            </center>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        // MouseOver
+        const arrow = document.getElementsByClassName('arrow')[0];
+        const imgArrow = document.querySelector('.arrow img');
+
+        arrow.addEventListener('mouseover', () => {
+            imgArrow.style.transform = "rotate(180deg)";
+            imgArrow.style.filter = "invert(1)";
+
+        });
+
+        arrow.addEventListener('mouseout', () => {
+            imgArrow.style.transform = "rotate(0deg)";
+            imgArrow.style.filter = "invert(0)";
+        });
+
+        // Double Click
+        const double = document.getElementsByClassName('double')[0];
+        const fonts = document.querySelectorAll('h1');
+
+        const fontChoices = ['Impact', 'Arial Narrow Bold', 'sans-serif', 'Franklin Gothic Medium'];
+
+        double.addEventListener('dblclick', () => {
+            const randomFont = fontChoices[Math.floor(Math.random() * fontChoices.length)];
+
+            fonts.forEach(h1 => {
+                h1.style.fontFamily = randomFont;
+            });
+        });
+
+
+    </script>
+
+    <style>
+        .arrow {
+            width: 90px;
+            height: 90px;
+            background-color: red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .arrow img {
+            width: 45px;
+            height: 45px;
+            transition: 300ms ease-in-out;
+        }
+
+        .double {
+            width: 90px;
+            height: 90px;
+            background-color: rgb(7, 19, 72);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
 </body>
 
 </html>
