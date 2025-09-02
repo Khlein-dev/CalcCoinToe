@@ -32,6 +32,10 @@
             const message = document.getElementsByClassName('message')[0];
 
             message.textContent = `Hello, ${yourName} Welcome to my Javascript Training!`;
+
+            if (!yourName) {
+                message.textContent = "Please Enter your name"
+            }
         }
 
 
@@ -53,13 +57,16 @@
             style="width: 200px; height: 50px; border-radius: 15px; background-color: aquamarine;">
             CHANGE TO LIGHTMODE
         </button>
+
+        <br><br>
+
+        <input type="text" id="name" placeholder="Enter your Name:" style="width: 200px; height: 30px;">
+        <button onclick="showname()">ENTER</button>
+        <br><br>
+        <div class="message">
+
+        </div>
     </center>
-
-    <input type="text" id="name" placeholder="Enter your Name:" style="width: 200px; height: 30px;">
-    <button onclick="showname()">ENTER</button>
-    <div class="message">
-
-    </div>
 
     <br><br>
     <!-- CALCULATOR -->
@@ -504,12 +511,24 @@
         </div>
 
         <!-- Double Click -->
-         
+
         <div class="double">
             <center>
                 <h4>Change <br>Font</h4>
             </center>
 
+        </div>
+
+        <!-- Click -->
+
+        <div class="appear">
+            <h1>Click me</h1>
+        </div>
+
+        <div class="done">
+            <h1>You are done with training!</h1>
+            <h3>Congratulations</h3>
+            <p>you are now familarize with Javascript dom</p>
         </div>
 
     </div>
@@ -545,6 +564,21 @@
             });
         });
 
+        // Click
+        const appear = document.querySelector('.appear');
+        const done = document.querySelector('.done');
+        let reverse = false
+
+        appear.addEventListener('click', () => {
+            if (!reverse) {
+                done.style.display = "block";
+            } else {
+                done.style.display = "none";
+            }
+
+            reverse = !reverse;
+
+        });
 
     </script>
 
@@ -574,6 +608,40 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .appear {
+            width: 90px;
+            height: 90px;
+            background-color: #067408;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+        }
+
+        .done {
+            position: fixed;
+            left: 0;
+            top: 0;
+            align-items: center;
+            padding: 20px;
+            width: 300px;
+            height: 100vh;
+            background-color: #460808;
+            animation: trans 700ms ease-in-out;
+            display: none;
+        }
+
+        @keyframes trans {
+            0% {
+                translate: -500px;
+            }
+
+            100% {
+                translate: 1px;
+            }
         }
     </style>
 
